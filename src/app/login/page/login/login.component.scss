@@ -1,0 +1,143 @@
+@import '../../../app.component.scss';
+
+.body-login{
+    display: flex;
+    background: $fondo;
+    height: 100vh;
+    width: 100%;
+    color: $grisOscuro;
+}
+
+.container{
+    position: relative;
+    width: 90%;
+    background: $blanco;
+    padding: 0;
+    box-shadow: 0rem .4rem .4rem rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    margin: auto auto;
+
+    @include desktop{
+        width: 50%;
+    }
+
+    .container-form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: $blanco;
+        padding: 0;
+        border-radius: 1rem;
+
+        .header-form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 3rem auto 6rem auto;
+
+            i{
+                font-size: 10rem;
+            }
+
+            h3{
+                font-family: $fontPoppins;
+                font-size: 3.6rem;
+                font-weight: $regular;
+            }
+        }
+
+        .body-form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-bottom: 2rem;
+
+            .input-group{
+                margin: auto auto 4rem auto !important;
+                width: 90%;
+                border: .2rem solid #C4C4C4;
+                border-radius: .5rem;
+                box-shadow: 0rem .4rem .4rem rgba(0, 0, 0, 0.25);
+            
+                .icon-input{
+                    background: $blanco;
+                    border: none;
+                    color:#ce1f00;
+                    border-right: none;
+
+                    i{
+                        border: .3rem solid #ce1f00;
+                        font-size: 3rem;
+                        border-radius: 50%;
+                    }
+                }
+
+                .form-control{
+                    font-size: 2rem;
+                    border: none;
+                    color: $grisOscuro;
+
+                    &::placeholder{
+                        color: lighten($grisOscuro, 20) ;
+                    }
+                }
+            }
+
+            .btn-danger{
+                margin: 4rem auto auto auto !important;
+                width: 90%;
+                background: #ce1f00;
+                border: none;
+                font-size: 2.4rem;
+                box-shadow: 0rem .4rem .4rem rgba(0, 0, 0, 0.25);
+
+                &:hover{
+                    background: darken(#ce1f00, 8);
+                }
+            }
+
+        }
+
+        .footer-form{
+            margin: 4rem auto 2rem auto;
+            p{
+                color: $grisOscuro;
+
+                a{
+                    color: $cian;
+                    cursor: pointer;
+                    text-decoration: none;
+
+                    &:hover{
+                        color: darken($cian, 8);
+                    }
+
+                    transition: .3s ease-in all;
+                }
+            }
+        }
+    }
+
+    .container-danger{
+        background: linear-gradient(180deg, #ce1f00 70%, rgba(0, 0, 0, 0) 100%);
+        filter: drop-shadow(-5px -1px 4px rgba(0, 0, 0, 0.25));
+        padding: 0;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        display: none;
+        @include tablet{
+            display: block;
+        }
+
+        h1{
+            color: $grisOscuro;
+            font-family: $fuente_logo;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            font-size: 3.2rem;
+            line-height: 10rem;
+        }
+    }
+}
+
